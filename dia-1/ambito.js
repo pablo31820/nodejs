@@ -36,3 +36,17 @@ class Bar{
 }
 
 new Foo()
+
+const bar = {}
+
+function Biz(name,surname){
+    this.name = name
+    this.surname = surname
+}
+
+//new Biz(....) //instancia
+//Biz(...) //global
+Biz.call(bar,"Pedro","Hurtado")
+//bar {name:'Pedro', surname:'Hurtado}
+Biz.apply(bar,["Pedro","Hurtado"])
+//bar {name:'Pedro', surname:'Hurtado}
